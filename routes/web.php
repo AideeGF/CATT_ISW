@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin','HomeController@adminIndex'); 
+//Route::get('/list_tt','HomeController@adminListTT');
+Route::get('/update/{id}','HomeController@adminUpdateTT');
+Route::resource('tterminal','TTermController');
+Route::get('/list_tt','TTermController@indexTT');
