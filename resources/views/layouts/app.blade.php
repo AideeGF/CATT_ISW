@@ -5,13 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
         <title>{{env('APP_NAME')}}</title>
 
         <!--Morris Chart CSS -->
 		<link rel="stylesheet" href="assets/plugins/morris/morris.css">
+        
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -19,6 +21,7 @@
         <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -93,7 +96,7 @@
                                 <ul class="list-unstyled">
                                 
                                     <li><a href="/list_tt">Lista</a></li>
-                                    <li><a href="create.html">Nuevo</a></li>
+                                    <li><a href="/create_tt">Nuevo</a></li>
                                     
                                 </ul>
                             </li>
@@ -148,5 +151,7 @@
         <script src="assets/pages/jquery.dashboard.js"></script>
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        
     </body>
 </html>

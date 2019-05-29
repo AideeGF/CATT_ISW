@@ -19,7 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin','HomeController@adminIndex'); 
-//Route::get('/list_tt','HomeController@adminListTT');
-Route::get('/update/{id}','HomeController@adminUpdateTT');
-Route::resource('tterminal','TTermController');
 Route::get('/list_tt','TTermController@indexTT');
+Route::get('/create_tt','TTermController@createTT');
+Route::post('/save_tt','TTermController@saveTT');
+Route::get('/eliminar_tt/{id}','TTermController@deleteTT');
+
+

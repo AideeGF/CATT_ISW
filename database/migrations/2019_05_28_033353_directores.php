@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTtTable extends Migration
+class Directores extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateTtTable extends Migration
      */
     public function up()
     {
-        Schema::create('tt', function (Blueprint $table) {
+        //
+        Schema::create('directores', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_tt')->unique();
+            $table->string('id_tt');
             $table->string('nombre');
+            $table->string('correo');
             $table->timestamps();
         });
     }
@@ -28,6 +30,7 @@ class CreateTtTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tt');
+        //
+        Schema::dropIfExists('directores');
     }
 }
