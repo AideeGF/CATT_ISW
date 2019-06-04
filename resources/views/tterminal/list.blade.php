@@ -44,7 +44,7 @@
                         </ul>
                     </td>
                     <td>
-                     <button class="btn btn-primary btn-custom waves-effect waves-light" type="button">Editar</button>
+                     <a href="/edit_tt"><button class="btn btn-primary btn-custom waves-effect waves-light" type="button">Editar</button>
                      <a href="{{ url('/eliminar_tt/') .'/'.$tt->id }}"><button class="btn btn-danger btn-custom waves-effect waves-light" type="button">Eliminar</button></a>
                     </td>
                 </tr>

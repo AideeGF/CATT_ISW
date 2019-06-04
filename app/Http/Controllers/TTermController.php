@@ -58,12 +58,58 @@ class TTermController extends Controller
                 $alumno->save();
             }
         }
+
+        for($i=1;$i<=2;$i++)
+        {
+            $director1=$request->get("director{$i}",null);
+            $correo1=$request->get("correo{$i}",null);
+            if($director1!==null && $correo1!==null )
+            {
+                $director=new directoresTT();
+                $director->nombre=$director1;
+                $director->correo=$correo1;
+                $director->id_tt=$id_tt;
+                $director->save();
+            }
+        }
+
+        for($i=1;$i<=3;$i++)
+        {
+            $sinodal1=$request->get("sinodal{$i}",null);
+            $correo1=$request->get("correo{$i}",null);
+            if($sinodal1!==null && $correo1!==null )
+            {
+                $sinodal=new sinodalesTT();
+                $sinodal->nombre=$sinodal1;
+                $sinodal->correo=$correo1;
+                $sinodal->id_tt=$id_tt;
+                $sinodal->save();
+            }
+        }
+
         return redirect('/list_tt');
     }
     public function deleteTT(Request $request, $id)
     {
         TrabajoTerminal::where('id',$id)->delete();
         return redirect('/list_tt');
+    }
+    public function editTT()
+    {
+        return view('tterminal/edit');
+    }
+    
+    public function updateTT(Request $request, $id)
+    {
+        //$tt=TrabajoTerminal::find($id);
+        //return redirect('/editar_tt');
+    }
+
+    public function showCalendar()
+    {
+        //$tt=TrabajoTerminal::find($id);
+        //return redirect('/editar_tt');
+        return view('tterminal/calendarTT');
     }
 
     

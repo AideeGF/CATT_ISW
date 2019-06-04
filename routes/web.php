@@ -23,5 +23,9 @@ Route::get('/list_tt','TTermController@indexTT');
 Route::get('/create_tt','TTermController@createTT');
 Route::post('/save_tt','TTermController@saveTT');
 Route::get('/eliminar_tt/{id}','TTermController@deleteTT');
+Route::get('/edit_tt','TTermController@editTT');
+Route::get("/calendar",'TTermController@showCalendar');
+//Route::post('/update_tt/{id}','TTermController@updateTT');
+
 
 

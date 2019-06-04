@@ -31,7 +31,9 @@
         <![endif]-->
 
         <script src="assets/js/modernizr.min.js"></script>
-
+        <script src='lib/jquery.min.js'></script>
+        <script src='lib/moment.min.js'></script>
+       
 
     </head>
 
@@ -101,7 +103,7 @@
                                 </ul>
                             </li>
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="ti-calendar"></i> <span> Calendario </span> <span class="menu-arrow"></span></a>
+                                <a href="/calendar" class="waves-effect"><i class="ti-calendar"></i> <span> Calendario </span> <span class="menu-arrow"></span></a>
                             </li>
                             
                         </ul>

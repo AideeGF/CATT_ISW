@@ -18,12 +18,26 @@
             
         </div>
         <div id="lista_alumnos"></div>
+        <BR>
          <button type="button" onclick="addAlumno()" class="btn btn-success">
                 + Agregar Alumno
             </button>
-                <button type="submit" class="btn btn-success">
-                    Guardar 
-                </button>
+        
+        <div id="lista_directores"></div>
+        <BR>
+         <button type="button" onclick="addDirector()" class="btn btn-success">
+                + Agregar Director
+            </button>
+        <BR>
+
+        <div id="lista_sinodales"></div>
+        <BR>
+         <button type="button" onclick="addSinodal()" class="btn btn-success">
+                + Agregar Sinodal
+            </button>
+        <BR>
+        <br>
+         <div><button type="submit" class="btn btn-success">Guardar</button></div>
         
     </form>
 
@@ -44,6 +58,40 @@
                 document.getElementById("lista_alumnos").appendChild(rootElement);
             } else {
                 alert('Un TT no puede tener más de 3 alumnos');
+            }
+        }
+
+        let no_director = 0;
+        function addDirector() {
+            no_director += 1;
+            if (no_director <= 2) {
+                let rootElement = document.createElement('div');
+                rootElement.setAttribute('class', 'form-group');
+                let contents = `<label>Nombre Director ${no_director}
+                                <input name="director${no_director}" type="text" class="form-control" />
+                                <label>Correo ${no_director}
+                                <input name="correo${no_director}" type="mail" class="form-control" />`;
+                rootElement.innerHTML = contents;
+                document.getElementById("lista_directores").appendChild(rootElement);
+            } else {
+                alert('Un TT no puede tener más de 2 directores');
+            }
+        }
+
+        let no_sinodal = 0;
+        function addSinodal() {
+            no_sinodal += 1;
+            if (no_sinodal <= 3) {
+                let rootElement = document.createElement('div');
+                rootElement.setAttribute('class', 'form-group');
+                let contents = `<label>Nombre Sinodal ${no_sinodal}
+                                <input name="sinodal${no_sinodal}" type="text" class="form-control" />
+                                <label>Correo ${no_sinodal}
+                                <input name="correo${no_sinodal}" type="mail" class="form-control" />`;
+                rootElement.innerHTML = contents;
+                document.getElementById("lista_sinodales").appendChild(rootElement);
+            } else {
+                alert('Un TT no puede tener más de 3 sinodales');
             }
         }
 </script>
